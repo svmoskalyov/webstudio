@@ -1,0 +1,44 @@
+.wemake {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.wemake__list {
+  @include centeredFlex();
+  @extend %list;
+}
+
+.wemake__item {
+  width: calc((100% - 60px) / 3);
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.wemake__tumb {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.wemake__background {
+  @include centeredFlex();
+
+  position: absolute;
+  bottom: 0;
+
+  height: 70px;
+  width: 100%;
+
+  background-color: getColor(wemake-background);
+}
+
+.wemake__text {
+  @include itemTypography(700, 14px, 1.14);
+
+  text-transform: uppercase;
+
+  color: getColor(text-white);
+}

@@ -1,0 +1,16 @@
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin itemTransition($type) {
+  transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin itemTypography($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-decoration: none;
+}

@@ -1,0 +1,38 @@
+.social {
+  @include centeredFlex();
+  @extend %list;
+}
+
+.social__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social__link {
+  @include centeredFlex();
+
+  width: 44px;
+  height: 44px;
+
+  fill: getColor(bg-icon);
+
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // @include itemTransition(background-color, fill);
+
+  &:hover,
+  &:focus {
+    fill: getColor(text-white);
+    background-color: getColor(accent);
+  }
+  &--invers {
+    fill: getColor(text-white);
+    background-color: getColor(bg-icon-footer);
+  }
+
+  &--invers:hover,
+  &--invers:focus {
+    background-color: getColor(accent);
+  }
+}

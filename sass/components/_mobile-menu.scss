@@ -1,0 +1,89 @@
+.menu-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  position: relative;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+
+  .menu-btn__close {
+    display: none;
+  }
+
+  &.active {
+    .menu-btn__menu {
+      display: none;
+    }
+
+    .menu-btn__close {
+      display: block;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        fill: getColor(accent);
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  display: none;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 48px 40px;
+    background-color: getColor(bg-body);
+  }
+  overflow: auto;
+}
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-social__item {
+  @extend %list;
+
+  .mobile-social__item + & {
+    border-left: 1px solid getColor(modal-border);
+    padding-left: 10px;
+  }
+  &:not(:last-child) {
+    padding-right: 10px;
+  }
+}
+
+.mobile-social__link {
+  @include itemTypography(500, 18px, 1.12);
+  color: getColor(accent);
+}

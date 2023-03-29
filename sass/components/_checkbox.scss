@@ -1,0 +1,73 @@
+.check {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-left: 25px;
+
+  text-align: left;
+  color: getColor(text-secondory);
+
+  @media screen and (max-width: 1199px) {
+    @include itemTypography(400, 12px, 1.17);
+    width: 370px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include itemTypography(400, 14px, 1.7);
+    width: 430px;
+  }
+}
+
+.check__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check__contract {
+  color: getColor(accent);
+}
+
+.check__box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid getColor(text-primary);
+  border-radius: 4px;
+
+  .check__input:focus ~ & {
+    box-shadow: 0 0 0 2px rgb(0, 123, 255);
+  }
+}
+
+.check__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+
+  fill: transparent;
+
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .check__input:checked ~ & {
+    fill: getColor(text-white);
+    background-color: getColor(accent);
+  }
+}

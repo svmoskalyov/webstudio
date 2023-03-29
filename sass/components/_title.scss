@@ -1,0 +1,81 @@
+.title {
+  margin: 0;
+
+  @media screen and (max-width: 1199px) {
+    @include itemTypography(700, 28px, 1.18);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include itemTypography(700, 36px, 1.17);
+    margin-bottom: 50px;
+  }
+
+  color: getColor(text-primary);
+  text-align: center;
+}
+
+.subtitle {
+  @include itemTypography(700, 14px, 1.14);
+
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.join__subtitle,
+.subscribe__subtitle {
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+  }
+
+  margin-bottom: 20px;
+  color: getColor(text-white);
+}
+
+.hero__title {
+  @media screen and (max-width: 1199px) {
+    @include itemTypography(900, 26px, 1.62);
+        max-width: 360px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include itemTypography(900, 44px, 1.36);
+    max-width: 696px;
+  }
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  letter-spacing: 0.06em;
+  color: getColor(text-white);
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__title {
+  @media screen and (max-width: 1199px) {
+    @include itemTypography(700, 20px, 1.5);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include itemTypography(700, 20px, 1.15);
+    max-width: 696px;
+  }
+
+  margin-bottom: 12px;
+}
+
+.features__title,
+.portfolio__title {
+  @extend %visually-hidden;
+}

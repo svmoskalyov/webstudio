@@ -1,0 +1,118 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: getColor(bg-footer);
+}
+
+.page-footer__container {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include centeredFlex();
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+}
+
+.address {
+  @extend %list;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__location {
+  @include itemTypography(400, 14px, 1.71);
+  @include itemTransition(color);
+
+  color: getColor(text-white);
+  font-style: normal;
+
+  &:hover,
+  &:focus {
+    color: getColor(accent);
+  }
+}
+
+.address__link {
+  @include itemTypography(400, 14px, 1.71);
+  @include itemTransition(color);
+
+  color: getColor(link-footer);
+  font-style: normal;
+
+  &:hover,
+  &:focus {
+    color: getColor(accent);
+  }
+}
+
+.join {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 165px;
+    margin-bottom: 102px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+
+.subscribe {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.subscribe__box {
+  text-align: center;
+}
+
+.subscribe__field {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+  }
+}
+
+.subscribe__input {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  padding: 16px;
+  width: 358px;
+  height: 50px;
+
+  color: getColor(text-white);
+  background-color: getColor(bg-footer);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
