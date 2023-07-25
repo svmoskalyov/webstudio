@@ -6,4 +6,8 @@ Personal project of the adaptive website (mobile, tablet and desctop) on pure HT
 ## 🛠 Technologies stack
 HTML, CSS, SASS, JavaScript
 
-![image](https://github.com/svmoskalyov/webstudio/assets/107481840/39b6c47a-160f-471c-9ab3-758858d99385)
+---
+
+![image](https://github.com/svmoskalyov/webstudio/assets/107481840/e9c7965e-92c4-4df3-8179-817a03015c02)
+
+---
